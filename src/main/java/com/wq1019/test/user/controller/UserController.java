@@ -31,15 +31,9 @@ public class UserController {
         userService.store(user);
     }
 
-    @PutMapping(value = "/update/{user_id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void update(@RequestBody User data, @PathVariable("user_id") int user_id) {
-        userService.update(user_id, data);
-    }
-
     @DeleteMapping(value = "/delete/{user_id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable("user_id") int user_id) {
+    public void delete(@PathVariable("user_id") Long user_id) {
         userService.delete(user_id);
     }
 

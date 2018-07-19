@@ -1,8 +1,12 @@
 package com.wq1019.test.user.model;
 
-public class User {
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-    private Integer id;
+@Table(name = "users")
+public class User {
+    @Id
+    private Long id;
     private String name;
     private String sex;
     private String address;
@@ -19,20 +23,19 @@ public class User {
     private String area;
     private String area_id;
 
-
     public User() {
     }
 
-    public User(Integer id, String name) {
+    public User(Long id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
