@@ -1,9 +1,0 @@
-com/wq1019/test/user/model/UserMapper.class
-com/wq1019/test/user/controller/UserController.class
-com/wq1019/test/basic/mybatis/CommonFiledAutoFillPlugin$UpdateSqlWrapper.class
-com/wq1019/test/user/service/UserService.class
-com/wq1019/test/user/model/User.class
-com/wq1019/test/basic/mybatis/CommonFiledAutoFillPlugin.class
-com/wq1019/test/basic/repositories/BaseRepository.class
-com/wq1019/test/user/controller/BaseController.class
-com/wq1019/test/user/repositories/UserRepostitory.class
