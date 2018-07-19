@@ -1,0 +1,6 @@
+com/wq1019/test/user/controller/UserController.class
+com/wq1019/test/user/controller/BaseController.class
+com/wq1019/test/user/repositories/UserRepostitory.class
+com/wq1019/test/user/service/UserService.class
+com/wq1019/test/user/model/User.class
+com/wq1019/test/util/SLUtils.class

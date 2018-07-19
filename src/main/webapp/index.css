@@ -1,0 +1,112 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+table#tab {
+    /* 合并单元格框线 */
+    border-collapse: collapse;
+    border-width: 2px;
+}
+
+table#tab th {
+    padding: 13px 9px;
+    min-width: 103px;
+    background-color: #999999;
+}
+
+table#tab td {
+    border-top: solid 1px #ccc;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.first, .second, .third {
+    margin-top: 10px;
+}
+
+.fourth {
+    text-align: right;
+    margin: 20px;
+}
+
+table#tab tbody tr:nth-child(even) {
+    background-color: rgba(218, 219, 218, 0.31);
+}
+
+.form > div {
+    overflow: hidden;
+}
+
+.form > div > p {
+    width: 50%;
+    float: left;
+}
+
+.form input {
+    height: 30px;
+    border: 1px solid #999;
+    padding-left: 10px;
+    outline: none;
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+.form input:focus {
+    border-color: #01AAED;
+}
+
+button {
+    padding: 10px;
+    background-color: #01AAED;
+    outline: none;
+    border: 1px solid #01AAED;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #0699d4;
+}
+
+button:disabled {
+    border: none;
+    background: #dddddd;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.mask .tk {
+    background-color: #fff;
+    width: 400px;
+    border-radius: 10px;
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td button:first-child {
+    margin-right: 10px;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+       	http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- 使用注解方式完成映射 -->
+    <!-- 让扫描spring扫描这个包下所有的类，让标注spring注解的类生效 -->
+    <context:component-scan base-package="com.wq1019"/>
+    <!-- 开启注解 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <!--响应读写字节数组 -->
+            <bean
+                    class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+            <!-- 配置fastjson支持 -->
+            <bean
+                    class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html;charset=UTF-8</value>
+                        <value>application/json;charset=UTF-8</value>
+                    </list>
+                </property>
+                <!--设置fastjson特性 -->
+                <property name="features">
+                    <list>
+                        <!--是否输出值为null的字段,默认为false -->
+                        <value>WriteMapNullValue</value>
+                        <!--输出key时是否使用双引号,默认为true -->
+                        <value>QuoteFieldNames</value>
+                        <!--设置使用文本方式输出日期,默认为long -->
+                        <value>WriteDateUseDateFormat</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+    <!-- 视图解析器 -->
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/pages"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 静态资源 -->
+    <mvc:resources mapping="/**" location="/"/>
+
+</beans>
