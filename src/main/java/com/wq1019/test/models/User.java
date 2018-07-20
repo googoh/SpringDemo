@@ -1,4 +1,4 @@
-package com.wq1019.test.user.model;
+package com.wq1019.test.models;
 
 import javax.persistence.Id;
 import javax.persistence.Table;

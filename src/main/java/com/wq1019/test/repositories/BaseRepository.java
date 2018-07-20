@@ -1,4 +1,4 @@
-package com.wq1019.test.basic.repositories;
+package com.wq1019.test.repositories;
 
 import java.util.List;
 

@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
-import com.wq1019.test.user.model.User;
+import com.wq1019.test.models.User;
 import org.apache.ibatis.builder.StaticSqlSource;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;

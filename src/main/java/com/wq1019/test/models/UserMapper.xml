@@ -3,6 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--这块等于dao接口的实现 namespace必须和接口的类路径一样 -->
-<mapper namespace="com.wq1019.test.user.model.UserMapper">
+<mapper namespace="com.wq1019.test.models.UserMapper">
 
 </mapper>
